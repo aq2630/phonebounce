@@ -1,0 +1,15 @@
+.feature-link {
+    font-family: "Open Sans SemiBold";
+    font-size: 18px;
+    color: #212122;
+    margin-top: 20px;
+    margin-bottom: 14px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.feature-link:hover {
+    text-decoration: none;
+}

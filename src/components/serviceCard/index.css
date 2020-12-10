@@ -1,0 +1,27 @@
+.services-items {
+    background:white;
+    padding:50px !important;
+    box-shadow:0 5px 15px 0 rgba(110, 110, 110, .1);
+    border-radius:15px;
+    text-align:center;
+    min-height:450px;
+    box-sizing: border-box;
+    position:relative;
+
+}
+.subtitle {
+    line-height: 28px;
+    font-size: 15px;
+    font-family: "Open Sans";
+    color: #808080;
+    margin-bottom: 0px;
+}
+
+.services-items:hover  {
+    background:linear-gradient(240deg, #16222a 0%, #3a6173 100%);
+    color:white !important;
+    cursor: pointer;
+}
+.services-items:hover .subtitle {
+    color:white !important
+}

@@ -1,0 +1,27 @@
+.wrapper {
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 5px 15px 0 rgba(110, 110, 110, .1);
+    border-radius: 15px;
+    margin-top: 50px;
+}
+
+.top-content {
+    padding: 40px 60px 20px 60px;
+}
+
+.list-info  {
+    padding: 20px 60px 40px 60px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: #ee5486;
+    margin: 0px;
+    list-style-type: none;
+
+}
+
+.bg-purple {
+    
+    background-color: #a5215e !important;
+
+}
