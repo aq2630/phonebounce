@@ -1,0 +1,23 @@
+.soc-icons a {
+    display: inline-block;
+    margin: 0px 10px 20px 0px;
+}
+
+.fs-1 {
+    font-size: 1rem;
+}
+.icon {
+  
+        background-color: #fff;
+        color: #ee5586;
+        display: block;
+        padding: 10px;
+        height: 42px;
+        line-height: 42px;
+        text-align: center;
+        border-radius: 15px;
+        width: 42px;
+        transition: 0.3s;
+        box-shadow: 0 2px 8px 0 rgba(62, 62, 79, 0.15);
+    
+}

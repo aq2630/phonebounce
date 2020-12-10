@@ -4,7 +4,6 @@ import { Box, Container, Grid, Button, Paper  } from '@material-ui/core';
 import './index.css'
 import GoToTop from '../../components/footer/goToTop'
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
-import buyPhone from '../../assets/images/buy_telephone_numbers.png'
 import {FeatureItem} from '../../components/featureItem'
 import mobile from '../../assets/images/4_Mobile-05.png'
 import local from '../../assets/images//5_Local-05.png'
@@ -12,67 +11,65 @@ import national from '../../assets/images/6_National-05.png'
 import tollFree from '../../assets/images/7_Toll_Free-05.png'
 import ServiceCard from '../../components/serviceCard'
 import FeatureIcon from '../../components/featureIcons'
-import android from "../../assets/images/android-app-icon.png"
-import apple from "../../assets/images/apple-app-icon.svg"
-// import Carousel from 'react-material-ui-carousel'
-import StarRateIcon from '@material-ui/icons/StarRate';
 import callBlock200 from '../../assets/images/14_Call_Blocking-200px.png'
-import Carousel from 'react-multi-carousel';
+import Carousel from 'react-material-ui-carousel'
+import ReviewBox from '../../components/reviewBox'
+import PricePlanCarousel from '../../components/pricePlan/PricePlanCarousel'
 import 'react-multi-carousel/lib/styles.css';
+import casestudyImage from '../../assets/images/casestudy.png'
+import Footer from '../../components/footer'
 import CenterMode from '../../components/SlickSlider'
-import PricePlan from '../../components/pricePlan'
 import callRecordinn400 from '../../assets/images/16_Call_Recording-400px.png'
 
 
-
-const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 4
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 3
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
-  };
-
-var reviews = [
+  var reviews = [
     {
-        name: "Mike Ne-yo hay",
-        description: "I got manythings from this app! its greatest app ever! I have seen!! call and text is best! video its very nice images and very good sound! every body need this app to call every where around the world! and I think you can call to another planet if you have friend there!!",
-        rating:[],
+        name: "CHEAP INTERNATIONAL CALLS",
+        description: "Allow us to route that call or message across the globe.  We can do this for your own number or one you buy.",
     },
     {
-        name: "Random Name #1",
-        description: "I got manythings from this app! its greatest app ever! I have seen!! call and text is best! video its very nice images and very good sound! every body need this app to call every where around the world! and I think you can call to another planet if you have friend there!!",
-        rating:[],
-    }
+        name: "CAMPAIGNS",
+        description: "Running a campaign, promoting your club or just looking for feedback? Use a virtual numbers just for the time you need it. Review calls and messages and once your are finished drop the number.",
+      
+    },
+    {
+        name: "BUSINESS START-UP",
+        description: "Starting a business and need a landline or several international numbers we have you covered. Put your Call Back button on your website convert more visitors to sales. With PhoneBounce you need never miss a call again.",
+      
+    },
+    {
+        name: "EMERGENCY NUMBERS",
+        description: "Register a toll-free number and give it to friends and family as you are on holiday. Now they can call you at no cost wherever you are.",
+      
+    },
+    {
+        name: "INTERNET SIGN-UPS",
+        description: "Signing up for dating sites, selling that car or just doing your shopping. Keep your personal number private.",
+      
+    },
+    {
+        name: "INTERNATIONAL NUMBERS",
+        description: "Buy a number close to friends, family or potential customers. Allow them to contact you for the cost of a local rate call.",
+      
+    },
+    {
+        name: "INTERNATIONAL NUMBERS",
+        description: "Buy a number close to friends, family or potential customers. Allow them to contact you for the cost of a local rate call.",
+      
+    },
 ]
 
 function Item(props)
 {
     return (
-        <Paper className="ShadowNone">            
-            <h5 className="text-center">{props.item.name}</h5>
-            <p className="text-center">{props.item.description}</p> 
-                <div className="d-inline-block mx-auto text-center" >
-                    <StarRateIcon className="rating text-center " />           
-                    <StarRateIcon className="rating text-center" />           
-                    <StarRateIcon className="rating text-center " /> 
-                </div>          
-                      
+        <Paper className="paper px-5">            
+            <h3 className="text-left author">{props.item.name}</h3>
+            <p className="content-info">{props.item.description}</p>               
         </Paper>
     )
 }
+
+
 
 export const CallRecording = () => {
     return (
@@ -128,83 +125,33 @@ See how you are performing and how your customers respond.</p>
                              <p>Call recording can be used for legal compliance, record keeping, agent training or quality control. It offers insights in to how your customer service and sales are preforming, while also backing up information taken whilst on your calls.</p>
                             </div>
                          </Grid>
-                     </Grid>
-                    
-                         
-                     
+                     </Grid>                    
                  </Container>
              </Box>
-             
-
-             
-             <Box className="bg-pricing py-4">
+             <Box className="py-3">
                  <Container>
                      <Grid container spacing={2}>
-                         <Grid item xs={12}>    
-                         <Carousel
-                            additionalTransfrom={0}
-                            arrows
-                            autoPlaySpeed={3000}
-                            centerMode={true}
-                            className=""
-                            containerClass="container-with-dots"
-                            dotListClass=""
-                            draggable
-                            focusOnSelect={false}
-                            infinite
-                            itemClass=""
-                            keyBoardControl
-                            minimumTouchDrag={80}
-                            renderButtonGroupOutside={false}
-                            renderDotsOutside={false}
-                            responsive={responsive}
-                            showDots={false}
-                            sliderClass=""
-                            slidesToSlide={1}
-                            swipeable
-                            >
-                               <PricePlan />
-                               <PricePlan />
-                               <PricePlan />
-                               <PricePlan />
-                               <PricePlan />
-                               <PricePlan />
-                               <PricePlan />
-                           
-                            </Carousel>
+                         <Grid item xs={12} >
+                            <div className="casestudy-main py-5">
+                                <img src={casestudyImage} />
+                                <Grid item xs={12} md={9} lg={9} >
+                                <Carousel  className="px-5 py-5" interval={4000}  navButtonsAlwaysInvisible={true} animation="slide" indicators={false}> 
+                                    {
+                                        reviews.map( (item, i) => <Item key={i} item={item} /> )
+                                    }
+                                </Carousel>
+                                </Grid>
+                            </div>
                          </Grid>
                      </Grid>
                  </Container>
 
              </Box>
-             <Box className="review-section py-4 px-5" >
-        <Container className="review-container">
-            <Grid container spacing={2} >
-                <Grid item xs={12} md={6} lg={6}>   
-                    <img className="img-fluid px-5 mb-5" src={android} alt="Android" />                 
-                        {/* <Carousel  className="px-5" interval={500000} navButtonsAlwaysInvisible={true} animation="slide" indicators={false}> 
-                        {
-                            reviews.map( (item, i) => <Item key={i} item={item} /> )
-                        }
-                    </Carousel> */}
 
-                    
-                </Grid>
-                <Grid item xs={12} md={6} lg={6}>
-                <img className="img-fluid px-5 mb-5" src={apple} alt="Apple" />                 
-                        {/* <Carousel className="px-5" navButtonsAlwaysInvisible={true} animation="slide" indicators={false}> 
-                        {
-                            reviews.map( (item, i) => <Item key={i} item={item} /> )
-                        }
-                    </Carousel> */}
-                </Grid>
-            </Grid>
-            
-        </Container>
-    </Box>
-            
 
-    <GoToTop />
+             <PricePlanCarousel />             
+                <ReviewBox />
+                <Footer />
         </div>
     )
 }

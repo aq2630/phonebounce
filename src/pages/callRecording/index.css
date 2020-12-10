@@ -40,6 +40,45 @@
     margin-top: -80px !important;
     z-index: 10;
 }
+.casestudy-main  {
+    background-color: #ee5586 !important;
+    border-radius:15px;
+    position: relative;
+}
+.casestudy-main img {
+    opacity: 0.5;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    vertical-align: middle;
+    border-style: none;
+
+}
+.casestudy-main .author {
+    font-size: 28px;
+    font-family: "Open Sans Semibold";
+    margin-bottom: 15px;
+    text-align: left;
+    text-transform: capitalize;
+    color: #fff;
+}
+.content-info {
+    font-size: 16px;
+    font-family: "Open Sans";
+    margin-bottom: 20px;
+    margin-top: 9px;
+    line-height: 30px;
+    text-align: left;
+    color: #fff;
+}
+.casestudy .content-info p {
+    font-size: 16px;
+}
+.casestudy-main .MuiPaper-elevation1, .casestudy-main.MuiPaper-root {
+    background-color:transparent !important;
+    box-shadow: none !important;
+}
 .main-wrapper .subheading {
     font-family: "Open Sans";
     color: #fff;

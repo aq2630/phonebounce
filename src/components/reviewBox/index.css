@@ -1,0 +1,14 @@
+.review-section {
+    background-color:#EFEFEF
+}
+.review-container {
+    background-color: white;
+    box-shadow: 0 5px 15px 0 rgba(110, 110, 110, .1);
+    border-radius: 15px;
+    position: relative;
+    padding: 80px 80px !important;
+}
+.rating {
+    color: #f8c703!important;
+}
+

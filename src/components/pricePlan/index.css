@@ -5,11 +5,14 @@
     border-radius: 15px;
     margin-top: 50px;
 }
-
 .top-content {
     padding: 40px 60px 20px 60px;
 }
-
+.title {
+    color: #ee5586;
+    font-size: 18px;
+    font-family: "Open Sans SemiBold";
+}
 .list-info  {
     padding: 20px 60px 40px 60px;
     border-bottom-right-radius: 15px;
@@ -17,11 +20,25 @@
     background-color: #ee5486;
     margin: 0px;
     list-style-type: none;
-
 }
-
-.bg-purple {
-    
+.plan-container .svg {
+    height: 50px;
+    /* width: 50px; */
+}
+.slick-slide img {
+    display: inline-block !important;
+}
+.plan-container .list-info li {
+    padding: 12px 0;
+    font-size: 14px;
+    font-family: "Open Sans";
+    color: #fff;
+}
+.bg-purple {    
     background-color: #a5215e !important;
-
+}
+.plan-container .price {
+    color: #181b22;
+    font-family: "Open Sans";
+    font-size: 28px;
 }
