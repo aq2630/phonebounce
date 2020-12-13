@@ -4,11 +4,12 @@ import SocialIcon from './socialIcon'
 import FooterCallBack from './footerCallBack'
 import {Box, Container, Grid} from '@material-ui/core'
 import './index.css'
+import { isMobile  } from "react-device-detect";
 
 const Footer = () => {
     return (
         <div>
-            <Box className="contact_services pt-5 px-5">
+            <Box className={isMobile ? "contact_services pt-5 px-2" : "contact_services pt-5 px-5" }>
         <Container>
             <Grid container spacing={2}>
                 <Grid item xs={12} md={4} lg={4}>
@@ -47,7 +48,7 @@ const Footer = () => {
             <Grid container spacing={2}>
                     <Grid item xs={12} className="text-center">
                         <a href="termsofservice.html" class="text-dark">Terms of Service</a>
-                        <span class="text-pink">|</span>
+                        <span class="text-pink mx-2">|</span>
                         <a href="privacy.html" class="text-dark">Privacy Policy</a>
                     </Grid>
             </Grid>

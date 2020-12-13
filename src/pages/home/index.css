@@ -17,6 +17,13 @@
     position: relative;
     padding: 80px 80px !important;
 } 
+.what-we-do-box-mobile {
+    background-color: white;
+    box-shadow: 0 5px 15px 0 rgba(110, 110, 110, .1);
+    border-radius: 15px;
+    position: relative;
+    padding: 80px 20px !important;
+} 
 .what-we-do-box h4 {
     margin-bottom: 20px;
     line-height: 34px;
@@ -124,19 +131,7 @@
     margin-bottom: 0;
     line-height: 34px;
 }
-.review-section {
-    background-color:#EFEFEF
-}
-.review-container {
-    background-color: white;
-    box-shadow: 0 5px 15px 0 rgba(110, 110, 110, .1);
-    border-radius: 15px;
-    position: relative;
-    padding: 80px 80px !important;
-}
-.rating {
-    color: #f8c703!important;
-}
+
 .imgWidth {
     width:100%;
 }

@@ -3,8 +3,12 @@ import React from 'react'
 import NewHeader from '../../components/newHeader/newheader'
 import { Box, Container, Grid, Button, Paper  } from '@material-ui/core';
 import './index.css'
-import PhoneBounceIn from '../../assets/images/comingIn.gif'
-import PhoneBounceOut from '../../assets/images/comingOut.gif'
+import GoToTop from '../../components/footer/goToTop'
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import {FeatureItemText} from '../../components/featureItemText'
+import {FeatureItem} from '../../components/featureItem'
+import mobile from '../../assets/images/4_Mobile-05.png'
+import local from '../../assets/images//5_Local-05.png'
 import callBlocking100 from '../../assets/images/14_Call_Blocking-100px.png'
 import callForwarding100 from '../../assets/images/15_Call_Forwarding-100px.png'
 import callRecording100 from '../../assets/images/16_Call_Recording-100px.png'
@@ -13,38 +17,119 @@ import conference100 from '../../assets/images/18_Conference_Calling-100px.png'
 import personalized100 from '../../assets/images/19_Personalised_Recording-100px.png'
 import translation100 from '../../assets/images/21_Translation-100px.png'
 import webIntegrations100 from '../../assets/images/22_Web_Integration-100px.png'
-import map from '../../assets/images/map.gif'
-import { BrowserView, MobileView, isBrowser, isMobile  } from "react-device-detect";
-import android from "../../assets/images/android-app-icon.png"
-import apple from "../../assets/images/apple-app-icon.svg"
-import {FeatureItem} from '../../components/featureItem'
-import Carousel from 'react-material-ui-carousel'
-import StarRateIcon from '@material-ui/icons/StarRate';
-import {Slideshow} from "../../components/slider"
-import GoToTop from '../../components/footer/goToTop'
+import national from '../../assets/images/6_National-05.png'
+import tollFree from '../../assets/images/7_Toll_Free-05.png'
 import ServiceCard from '../../components/serviceCard'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import SocialIcon from '../../components/footer/socialIcon'
-import Footer from '../../components/footer'
+import FeatureIcon from '../../components/featureIcons'
+import callBlock200 from '../../assets/images/14_Call_Blocking-200px.png'
+import Carousel from 'react-material-ui-carousel'
 import ReviewBox from '../../components/reviewBox'
-import BR from '../../assets/images/BR.png'
-import GB from '../../assets/images/GB.png'
-import US from '../../assets/images/US.png'
-import CA from '../../assets/images/CA.png'
-import SE from '../../assets/images/SE.png'
+import PricePlanCarousel from '../../components/pricePlan/PricePlanCarousel'
+import 'react-multi-carousel/lib/styles.css';
+import { BrowserView, MobileView, isBrowser, isMobile  } from "react-device-detect";
+import casestudyImage from '../../assets/images/casestudy.png'
+import Footer from '../../components/footer'
+import CenterMode from '../../components/SlickSlider'
+import techAndDesign from '../../assets/images/TechnologyAndDesign.png'
 
 
-export const Home = () => {
-return (
-    <div>
-    {/* <Header /> */}
-    <NewHeader />
-    <div><Slideshow /></div>
+  var reviews = [
+    {
+        name: "CHEAP INTERNATIONAL CALLS",
+        description: "Allow us to route that call or message across the globe.  We can do this for your own number or one you buy.",
+    },
+    {
+        name: "CAMPAIGNS",
+        description: "Running a campaign, promoting your club or just looking for feedback? Use a virtual numbers just for the time you need it. Review calls and messages and once your are finished drop the number.",
+      
+    },
+    {
+        name: "BUSINESS START-UP",
+        description: "Starting a business and need a landline or several international numbers we have you covered. Put your Call Back button on your website convert more visitors to sales. With PhoneBounce you need never miss a call again.",
+      
+    },
+    {
+        name: "EMERGENCY NUMBERS",
+        description: "Register a toll-free number and give it to friends and family as you are on holiday. Now they can call you at no cost wherever you are.",
+      
+    },
+    {
+        name: "INTERNET SIGN-UPS",
+        description: "Signing up for dating sites, selling that car or just doing your shopping. Keep your personal number private.",
+      
+    },
+    {
+        name: "INTERNATIONAL NUMBERS",
+        description: "Buy a number close to friends, family or potential customers. Allow them to contact you for the cost of a local rate call.",
+      
+    },
+    {
+        name: "INTERNATIONAL NUMBERS",
+        description: "Buy a number close to friends, family or potential customers. Allow them to contact you for the cost of a local rate call.",
+      
+    },
+]
 
-    <div
-    >
-    <Box className="bg-main py-5 px-5" className={isMobile ? "bg-main py-5 px-2" : "bg-main py-5 px-5"}>
+function Item(props)
+{
+    return (
+        <Paper className="paper px-5">            
+            <h3 className="text-left author">{props.item.name}</h3>
+            <p className="content-info">{props.item.description}</p>               
+        </Paper>
+    )
+}
+
+
+
+export const Features = () => {
+    return (
+        <div>
+             {/* <Header /> */}
+             <NewHeader />
+             <Box className="main-wrapper pb-3">
+                 <Container>
+                     <Grid container spacing={2}>
+                         <Grid item xs={12} md={6} lg={6}>
+                             <div className="px-5">
+                             <h1 className="heading">With Features You Expect</h1>                             
+                           
+                           <Grid container spcing={2} className={isMobile ? "d-none" : ""}>
+                               <Grid item xs={12} md={6} lg={6}>
+                               <ul className="mt-4">
+                                 <li><CheckCircleIcon className="icon-primary" /><span>Call Forwarding</span></li>
+                                 <li><CheckCircleIcon className="icon-primary" /><span>Call Recording</span></li>
+                                 <li><CheckCircleIcon className="icon-primary" /><span>Call Scheduling</span></li>
+                                 <li><CheckCircleIcon className="icon-primary" /><span>Call Whispering</span></li>
+                                 
+                             </ul>
+                                   
+                               </Grid>
+                               <Grid item xs={12} md={6} lg={6}>
+                               <ul className="mt-4">
+                                 <li><CheckCircleIcon className="icon-primary" /><span>Conference Calling</span></li>
+                                 <li><CheckCircleIcon className="icon-primary" /><span>Personalised Voicemail</span></li>
+                                 <li><CheckCircleIcon className="icon-primary" /><span>Translation</span></li>
+                                 <li><CheckCircleIcon className="icon-primary" /><span> Web Integration</span></li>
+                                 
+                             </ul>
+
+                               </Grid>
+                           </Grid>
+                            
+                             <p className={isMobile ? "subheading mt-3" : "subheading"}>If you run a small business, you need to do more with less. That’s why all our phone numbers come with these advanced calling features. Through using our app, we can change the way you communicate for the best. May it be for business or leisure purposes, everyone deserves to have access to the latest and greatest features.</p>
+                             </div>
+                         </Grid>
+                         <Grid item xs={12} md={6} lg={6}>
+                             <div className="px-5 py-5">
+                                 <img src={techAndDesign} className="img-fluid" alt="Buy Phone" />
+                             </div>
+                         </Grid>
+                     </Grid>
+                 </Container>
+
+             </Box>             
+             <Box className="bg-main py-5 px-5" className={isMobile ? "bg-main py-5 px-2" : "bg-main py-5 px-5"}>
     <Container > 
         
     <Grid container spacing={6}>
@@ -138,81 +223,42 @@ return (
         </Grid>
     </Container>
     </Box>
-    </div>
-    <Box className={isMobile ? "bg-what-we-do px-0 my-2" : " bg-what-we-do px-5 px-5"}>
-        <Container className={isMobile ? "what-we-do-box" : "what-we-do-box-mobile"}>
-            <Grid container spacing={2}>
-                <Grid item xs={12}>                    
-                    <h3 className="text-center">What We Do</h3>
-                    <p className="text-center">PhoneBounce offers cheap international calls as well as instant redirection for numbers from over 40 countries.
-                        We provide fixed, toll-free or mobile numbers, instant set up, call screening and complete privacy.
-                        Sign up today for free and have the first calls on us.</p> 
-                </Grid>
-                <Grid item xs={12} md={6} lg={6} className={isMobile ? "px-0 my-2" : "my-5 px-5"}>
-                    <h4>How We Do It?</h4>
-                    <p className="line-32">Using the latest cloud technology Phonebounce offers seamless virtual phone numbers in many countries. We route your call via a local point making all calls local. This allows us to deliver calls and messages at local rates worldwide. We bridge the gap between the internet and real phones, allowing calls to or from anyone, anywhere.</p>
-                    <Button variant="contained" className="btn-App mt-3" color="secondary">
-                        Check Out The App
-                    </Button>
-                </Grid>
-                <Grid item xs={12} md={6} lg={6} className={isMobile ? "px-0 my-2" : "my-5 px-5"}>
-                    <img src={PhoneBounceIn} className="img-fluid d-block mx-auto" alt="PhonceBounce In"/>
-                </Grid>
-                <Grid item xs={12} md={6} lg={6} className={isMobile ? "px-0 my-2" : "my-5 px-5"}>
-                    <img src={PhoneBounceOut} className="img-fluid d-block mx-auto" alt="PhonceBounce Out"/>
-                </Grid>
-                <Grid item xs={12} md={6} lg={6} className={isMobile ? "px-0 my-2" : "my-5 px-5"}>
-                    
-                    <h4>How we can help you</h4>
-                    <p className="line-32">We create the room for businesses to grow internationally, traders to separate life from work and people to have a second anonymous number. PhoneBounce has got you covered in every aspect of phone redirection.</p>
-                    <Button variant="contained" className="btn-App mt-3" color="secondary">
-                        Check Out The Features
-                    </Button>
-                </Grid>
-            </Grid>
 
-        </Container>
-
-    </Box>
     <Box className="features-box px-5 py-5">
         <Container>
             <Grid conatiner spacing={1}>
+                <Grid container spacing={2}>                  
+                </Grid>
                 <Grid container spacing={2}>
-                    <Grid item className="text-center" xs={12}>
-                        <h2>Features</h2>
-                        <p>All features are included with every new number purchased from PhoneBounce.</p>
+                    <Grid item xs={12} md={6} lg={6}>
+                        <FeatureItemText image={callBlocking100} imageAlt="Call Blocking" title="Call Blocking" description="lets you choose who can call you giving you control of your numbers." />
+                    </Grid>
+                    <Grid item xs={12} md={6} lg={6}>
+                            <FeatureItemText image={callForwarding100} imageAlt="Call Forwarding" title="Call Forwarding" description="allows you to receive calls and messages wherever you are." />
                     </Grid>
                 </Grid>
                 <Grid container spacing={2}>
                     <Grid item xs={12} md={6} lg={6}>
-                        <FeatureItem image={callBlocking100} imageAlt="Call Blocking" title="Call Blocking" />
+                        <FeatureItemText image={callRecording100} imageAlt="Call Recording" title="Call Recording" description="enables replays and insights in to the calls you have." />
                     </Grid>
                     <Grid item xs={12} md={6} lg={6}>
-                            <FeatureItem image={callForwarding100} imageAlt="Call Forwarding" title="Call Forwarding" />
-                    </Grid>
-                </Grid>
-                <Grid container spacing={2}>
-                    <Grid item xs={12} md={6} lg={6}>
-                        <FeatureItem image={callRecording100} imageAlt="Call Recording" title="Call Recording" />
-                    </Grid>
-                    <Grid item xs={12} md={6} lg={6}>
-                            <FeatureItem image={callWhisper100} imageAlt="Call Whispering" title="Call Whispering" />
+                            <FeatureItemText image={callWhisper100} imageAlt="Call Whispering" title="Call Whispering"  description="plays some information about the number calling you before you answer, helping you determine who it is." />
                     </Grid>
                 </Grid>
                 <Grid container spacing={2}>
                     <Grid item xs={12} md={6} lg={6}>
-                        <FeatureItem image={conference100} imageAlt="callWhisper100" title="Conferencing" />
+                        <FeatureItemText image={conference100} imageAlt="callWhisper100" title="Conferencing" description="sets up a secure room which callers can join, allowing for multiple users in one call." />
                     </Grid>
                     <Grid item xs={12} md={6} lg={6}>
-                            <FeatureItem image={personalized100} imageAlt="Personalised Voicemails" title="Personalised Voicemails" />
+                            <FeatureItemText image={personalized100} imageAlt="Personalised Voicemails" title="Personalised Voicemails" description="are great for adding a human touch and informing customers about why you are unavailable." />
                     </Grid>
                 </Grid>
                 <Grid container spacing={2}>
                     <Grid item xs={12} md={6} lg={6}>
-                        <FeatureItem image={translation100} imageAlt="Real-time Translation" title="Real-time Translation" />
+                        <FeatureItemText image={translation100} imageAlt="Real-time Translation" title="Real-time Translation" description="allows for on the fly calls with international friends or business partners who don't speak your native language." />
                     </Grid>
                     <Grid item xs={12} md={6} lg={6}>
-                            <FeatureItem image={webIntegrations100} imageAlt="Web Integration" title="Web Integration" />
+                            <FeatureItemText image={webIntegrations100} imageAlt="Web Integration" title="Web Integration" description="enables you to use Phonebounces API on your own site. Let your customers experience a second number." />
                     </Grid>
                 </Grid>
             </Grid>
@@ -220,25 +266,51 @@ return (
 
     </Box>
 
-    <Box className={isMobile ? "maping px-1 py-4" : "maping px-5 py-4"}>
+
+    <Box className={isMobile ? "bg-dark-feature-items pt-5 pb-4 px-1" : "bg-dark-feature-items pt-5 pb-4 px-5"}>
         <Container>
-            <Grid container className={isMobile ? "px-1" : "px-5"} spacing={2}>
-                <Grid item xs={12}>
-                <h2 className="section-heading text-white">Local point of presence all over the world</h2>
-                <p className="section-subheading">We route your calls over the internet bridging physical and virtual phones.
-                <br /><span className="text-pink">  With low call rates, super fast connections, pushing business forward. </span> </p>
-                </Grid>
-                <Grid item xs={12}>
-                    <img src={map} alt="Map" className="img-fluid" />
-                </Grid>
+            <Grid container spacing={2}>
+                         <Grid item xs={12} md={3} lg={3}>
+                             <FeatureItem image={mobile} title="Mobile" />
+                         </Grid>
+                         <Grid item xs={12} md={3} lg={3}>
+                            <FeatureItem image={local} title="Local" />
+                         </Grid>
+                         <Grid item xs={12} md={3} lg={3}>
+                            <FeatureItem image={national} title="National" />
+                         </Grid>
+                         <Grid item xs={12} md={3} lg={3}>
+                             <FeatureItem image={tollFree} title="Toll Free" />
+                         </Grid>
             </Grid>
         </Container>
     </Box>
-    <ReviewBox />  
-    <Footer />
-    
-    </div>
-)
+             <Box className="py-3">
+                 <Container>
+                     <Grid container spacing={2}>
+                         <Grid item xs={12} >
+                            <div className="casestudy-main py-5">
+                                <img src={casestudyImage} />
+                                <Grid item xs={12} md={9} lg={9} >
+                                <Carousel  className="px-5 py-5" interval={4000}  navButtonsAlwaysInvisible={true} animation="slide" indicators={false}> 
+                                    {
+                                        reviews.map( (item, i) => <Item key={i} item={item} /> )
+                                    }
+                                </Carousel>
+                                </Grid>
+                            </div>
+                         </Grid>
+                     </Grid>
+                 </Container>
+             </Box>
 
-
+                
+                <ReviewBox />
+                <div className="footer-dark">
+                    <Footer />
+                </div>
+                
+                
+        </div>
+    )
 }

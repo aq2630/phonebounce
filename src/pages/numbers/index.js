@@ -1,5 +1,6 @@
 import React from 'react'
-import Header from '../../components/header/Header'
+// import Header from '../../components/header/Header'
+import NewHeader from '../../components/newHeader/newheader'
 import { Box, Container, Grid, Button, Paper  } from '@material-ui/core';
 import './index.css'
 import GoToTop from '../../components/footer/goToTop'
@@ -25,6 +26,7 @@ import callWhispering200 from '../../assets/images/17_Call_Whisper-200px.png'
 import voiceMail200 from '../../assets/images/19_Personalised_Recording-200px.png'
 import webIntegrations200 from '../../assets/images/22_Web_Integration-200px.png'
 import Carousel from 'react-multi-carousel';
+import { BrowserView, MobileView, isBrowser, isMobile  } from "react-device-detect";
 import 'react-multi-carousel/lib/styles.css';
 import ReviewBox from '../../components/reviewBox'
 import CenterMode from '../../components/SlickSlider'
@@ -37,7 +39,8 @@ import PricePlanCarousel from '../../components/pricePlan/PricePlanCarousel'
 export const Numbers = () => {
     return (
         <div>
-             <Header />
+             {/* <Header /> */}
+             <NewHeader />
              <Box className="main-wrapper pb-3">
                  <Container>
                      <Grid container spacing={2}>
@@ -81,32 +84,32 @@ export const Numbers = () => {
                      </Grid>
                  </Container>
                  <Container className=" mt-5 px-5 ">
-                     <Grid container className="px-5 bg-white box-shadow" spacing={5}>
+                     <Grid container className={isMobile ? "px-1 bg-white box-shadow" : "px-5 bg-white box-shadow"}  spacing={5}>
                          <Grid item xs={12} md={12} lg={12} >
                              <h2 className="text-center">New Phone Number</h2>
                              <p className="text-center">Setup multiple numbers from lots of countries and have all calls and messages redireted to your mobile. Use it to list goods on a websites, sign up to services, call home from abroad or just keeping your personal number private. Our numbers are untraceable and come with complete anonymity, giving you the privacy you need in todays connected world.</p>
                          </Grid>
                          <Grid item xs={12} md={6} lg={6} >
-                             <div className="px-5">
+                             <div className={isMobile ? "px-0" : "px-5"}>
                              <h4>Mobile</h4>
                              <p>Local numbers can expand your company's geographical reach, without the additional cost. Expand you company nationally or globally, while giving customers the satisfaction of calling a local number.</p>
                              </div>
                          </Grid>
                          <Grid item xs={12} md={6} lg={6} >
-                         <div className="px-5">
+                         <div className={isMobile ? "px-0" : "px-5"}>
                              <h4>Local</h4>
                              <p>Local numbers can expand your company's geographical reach, without the additional cost. Expand you company nationally or globally, while giving customers the satisfaction of calling a local number.</p>
                             </div>
                          </Grid>                   
                     
                          <Grid item xs={12} md={6} lg={6} >
-                         <div className="px-5">
+                         <div className={isMobile ? "px-0" : "px-5"} >
                              <h4>National</h4>
                              <p>National numbers are phone numbers designed to be reachable from anywhere in the country. They cost the same price of a local call, giving you a centralised line of business, no matter the distance.</p>
                             </div>
                          </Grid>
                          <Grid item xs={12} md={6} lg={6} >
-                         <div className="px-5">
+                         <div className={isMobile ? "px-0" : "px-5"}>
                              <h4>Toll-free</h4>
                              <p>Toll free numbers not only let customers connect to you free of charge, but also gives you an edge in terms of brand image and accessibility. Free to call helplines and sales numbers deliver better customer service and are proven to turn more leads in to customers.</p>
                             </div>

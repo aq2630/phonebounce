@@ -12,3 +12,8 @@
     color: #f8c703!important;
 }
 
+@media only screen and (max-width: 767px) {
+    .review-container {
+        padding: 80px 20px !important;
+    }
+  }

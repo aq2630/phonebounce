@@ -2,6 +2,7 @@ import React from 'react'
 import PricePlan from './index'
 import Carousel from 'react-multi-carousel';
 import {Box, Grid} from '@material-ui/core'
+import { isMobile  } from "react-device-detect";
 import BR from '../../assets/images/BR.png'
 import GB from '../../assets/images/GB.png'
 import US from '../../assets/images/US.png'
@@ -14,7 +15,8 @@ const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 4
+      items: 4,
+      partialVisibilityGutter: 30,
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -22,11 +24,13 @@ const responsive = {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 3
+      items: 2,
+      partialVisibilityGutter: 0,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1
+      items: 1,
+      partialVisibilityGutter: 0,
     }
   };
 
@@ -37,7 +41,17 @@ const PricePlanCarousel = () => {
                  <>
                      <Grid container spacing={2}>
                          <Grid item xs={12}>    
-                         <Carousel
+                         {isMobile ? 
+                            <div>
+                               <PricePlan flagImage={BR} title="Brazil" price={5} />
+                               <PricePlan flagImage={GB} title="United Kingdom" price={5} />
+                               <PricePlan flagImage={AU} title="Australia" price={5} />
+                               <PricePlan flagImage={US} title="US Toll-Free" price={5} />
+                               <PricePlan flagImage={CA} title="Canada" price={5} />
+                               <PricePlan flagImage={SE} title="Sweden" price={5} />
+                            </div>
+                           
+                        : (<Carousel
                             additionalTransfrom={0}
                             arrows
                             autoPlaySpeed={3000}
@@ -66,13 +80,11 @@ const PricePlanCarousel = () => {
                                <PricePlan flagImage={CA} title="Canada" price={5} />
                                <PricePlan flagImage={SE} title="Sweden" price={5} />
                            
-                            </Carousel>
+                            </Carousel>) }                         
                          </Grid>
                      </Grid>
                  </>
-
-             </Box>
-            
+             </Box>            
         </div>
     )
 }

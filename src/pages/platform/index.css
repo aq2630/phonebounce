@@ -1,0 +1,27 @@
+.footer-dark .contact_services {
+    background-color: #385E70;
+  
+}
+.footer-dark .contact_services a {
+    color:white !important;
+}
+.bg-dark-feature-items {
+    background-color:#385E70
+}
+.service-help {
+    background-color: #F6F6F6;
+}
+.service-help p {
+    line-height: 32px;
+    color: #808080;
+}
+.box-shadow{
+    box-shadow: 0 5px 15px 0 rgba(110, 110, 110, .1);
+    border-radius: 15px;
+    position: relative;
+    padding: 80px 80px;
+}
+
+.bg-white {
+    background:white;
+}

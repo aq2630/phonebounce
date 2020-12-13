@@ -1,5 +1,6 @@
 import React from 'react'
-import Header from '../../components/header/Header'
+// import Header from '../../components/header/Header'
+import NewHeader from '../../components/newHeader/newheader'
 import { Box, Container, Grid, Button, Paper  } from '@material-ui/core';
 import './index.css'
 import GoToTop from '../../components/footer/goToTop'
@@ -16,6 +17,7 @@ import Carousel from 'react-material-ui-carousel'
 import ReviewBox from '../../components/reviewBox'
 import PricePlanCarousel from '../../components/pricePlan/PricePlanCarousel'
 import 'react-multi-carousel/lib/styles.css';
+import { BrowserView, MobileView, isBrowser, isMobile  } from "react-device-detect";
 import casestudyImage from '../../assets/images/casestudy.png'
 import Footer from '../../components/footer'
 import CenterMode from '../../components/SlickSlider'
@@ -74,7 +76,8 @@ function Item(props)
 export const CallRecording = () => {
     return (
         <div>
-             <Header />
+             {/* <Header /> */}
+             <NewHeader />
              <Box className="main-wrapper pb-3">
                  <Container>
                      <Grid container spacing={2}>
@@ -105,8 +108,8 @@ See how you are performing and how your customers respond.</p>
              </Box>
              <Box className="service-help pb-5">
                  
-                 <Container className="mt-3 px-5 ">
-                     <Grid container className="px-5 bg-white box-shadow" spacing={5}>
+                 <Container className={isMobile ? "mt-3 px-1" : "mt-3 px-5 "}>
+                     <Grid container className="px-5 bg-white box-shadow" className={isMobile ? "px-2 bg-white box-shadow" : "px-5 bg-white box-shadow"} spacing={5}>
                          <Grid item xs={12} md={12} lg={12} >
                              <h2 className="text-center">What Is Call Recording?</h2>
                              <p className="text-center">Call Recording, allows you to record any incoming or outgoing calls received to your second line.</p>

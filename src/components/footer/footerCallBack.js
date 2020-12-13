@@ -9,8 +9,7 @@ const FooterCallBack = (props) => {
                         <div className="img">{props.svg}</div>
                         <div className="inform"><h2 className="title">{props.title}</h2></div>
                     </a>
-                    </div>
-            
+                    </div>            
         </div>
     )
 }

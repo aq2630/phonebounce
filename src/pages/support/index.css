@@ -1,0 +1,64 @@
+.footer-dark .partial-footer {
+    background-color: #385E70;
+  
+}
+.footer-dark .partial-footer a {
+    color:white !important;
+}
+.bg-dark-feature-items {
+    background-color:#385E70
+}
+.review-section-bg {
+    background-color:#EFEFEF
+}
+.service-help p {
+    line-height: 32px;
+    color: #808080;
+}
+.box-shadow{
+    box-shadow: 0 5px 15px 0 rgba(110, 110, 110, .1);
+    border-radius: 15px;
+    position: relative;
+    padding: 80px 80px;
+}
+
+.bg-white {
+    background:white;
+}
+.contact-flag {
+    width:22px;
+}
+.fullwidth-textarea {
+    width:100%;
+    padding:10px 15px;
+    border-radius:10px;
+    border-color:#B3B3B3;
+}
+.fullwidth-textarea:focus {
+    border-color:#ee5586 !important;
+}
+.radius50 {
+    border-radius:50px !important;
+}
+.radius50 .MuiOutlinedInput-root {
+    border-radius:50px;
+}
+.radius50 .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color:#ee5586 !important;
+}
+.radius50 .Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color:#ee5586 !important;
+   
+}
+.text-justify-center {  
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;    
+}
+.link-pink {
+    color: #ee5586 !important;
+    font-family: "Open Sans" !important;
+    cursor: pointer !important;
+}

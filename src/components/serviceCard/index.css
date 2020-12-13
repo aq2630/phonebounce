@@ -9,6 +9,17 @@
     position:relative;
 
 }
+.services-items-mobile {
+    background:white;
+    padding:25px !important;
+    box-shadow:0 5px 15px 0 rgba(110, 110, 110, .1);
+    border-radius:15px;
+    text-align:center;
+    min-height:450px;
+    box-sizing: border-box;
+    position:relative;
+
+}
 .subtitle {
     line-height: 28px;
     font-size: 15px;

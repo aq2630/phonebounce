@@ -1,6 +1,7 @@
 import React from 'react'
 import './index.css'
 
+
 export const FeatureItem = (props) => {
     return (
         <div>
@@ -9,8 +10,7 @@ export const FeatureItem = (props) => {
                         <div className="img"><img src={props.image} alt={props.imageAlt} /></div>
                         <div className="inform"><h2 className="title">{props.title}</h2></div>
                     </a>
-                    </div>
-            
+                    </div>            
         </div>
     )
 }
